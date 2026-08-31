@@ -1,0 +1,273 @@
+/**
+ * Input Component Styles
+ * WCAG 2.1 AA Compliant
+ * Minimum 44px height (48px preferred)
+ * Clear validation feedback
+ */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+/* Label - Always visible, above input */
+.input-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-label {
+    color: #F3F4F6;
+  }
+}
+
+.input-required {
+  color: #EF4444;
+  margin-left: 4px;
+  font-weight: 700;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  padding-right: 44px; /* Space for success/error indicator */
+  
+  /* Typography */
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.5;
+  color: #111827;
+  
+  /* Appearance */
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  
+  /* Transitions */
+  transition: border-color 150ms, background-color 150ms, box-shadow 150ms;
+  
+  /* Remove default input styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Focus */
+  outline: none;
+}
+
+/* Focus State (2px outline with gap) */
+.input-field:focus {
+  border-color: #0EA5E9;
+  box-shadow: 0 0 0 2px #F0F9FF, 0 0 0 4px #0EA5E9;
+}
+
+/* Hover State */
+.input-field:hover:not(:disabled) {
+  border-color: #0EA5E9;
+}
+
+/* Disabled State */
+.input-field:disabled {
+  background-color: #F3F4F6;
+  color: #9CA3AF;
+  cursor: not-allowed;
+}
+
+.input-group--disabled .input-label {
+  color: #9CA3AF;
+}
+
+/* Error State */
+.input-group--error .input-field {
+  border-color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.input-group--error .input-field:focus {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 2px #FEF2F2, 0 0 0 4px #EF4444;
+}
+
+/* Success State */
+.input-group--success .input-field {
+  border-color: #22C55E;
+  background-color: #F0FDF4;
+}
+
+.input-group--success .input-field:focus {
+  border-color: #22C55E;
+  box-shadow: 0 0 0 2px #F0FDF4, 0 0 0 4px #22C55E;
+}
+
+/* Indicator (Success/Error Icon) */
+.input-indicator {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.input-indicator--success {
+  color: #22C55E;
+  background-color: #F0FDF4;
+}
+
+.input-indicator--error {
+  color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+/* Error Message */
+.input-error {
+  font-size: 14px;
+  color: #DC2626;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-error {
+    color: #FCA5A5;
+  }
+}
+
+/* Hint Text */
+.input-hint {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-hint {
+    color: #D1D5DB;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .input-field {
+    background-color: #374151;
+    border-color: #4B5563;
+    color: #F3F4F6;
+  }
+  
+  .input-field:hover:not(:disabled) {
+    border-color: #0EA5E9;
+  }
+  
+  .input-field:focus {
+    border-color: #0EA5E9;
+    box-shadow: 0 0 0 2px #1F2937, 0 0 0 4px #0EA5E9;
+  }
+  
+  .input-field:disabled {
+    background-color: #1F2937;
+    color: #9CA3AF;
+  }
+  
+  .input-group--error .input-field {
+    border-color: #EF4444;
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  
+  .input-group--error .input-field:focus {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1), 0 0 0 4px #EF4444;
+  }
+  
+  .input-group--success .input-field {
+    border-color: #22C55E;
+    background-color: rgba(34, 197, 94, 0.1);
+  }
+  
+  .input-group--success .input-field:focus {
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1), 0 0 0 4px #22C55E;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .input-field {
+    transition: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    font-size: 16px; /* Prevent zoom on iOS */
+    min-height: 48px;
+  }
+}
+
+/* Placeholder Text */
+.input-field::placeholder {
+  color: #9CA3AF;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-field::placeholder {
+    color: #6B7280;
+  }
+}
+
+/* Number Input Specific */
+input[type="number"].input-field {
+  -moz-appearance: textfield; /* Remove spinner in Firefox */
+}
+
+input[type="number"].input-field::-webkit-outer-spin-button,
+input[type="number"].input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Autocompletion Styling */
+input.input-field:-webkit-autofill,
+input.input-field:-webkit-autofill:hover,
+input.input-field:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #111827;
+}
+
+@media (prefers-color-scheme: dark) {
+  input.input-field:-webkit-autofill,
+  input.input-field:-webkit-autofill:hover,
+  input.input-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #374151 inset;
+    box-shadow: 0 0 0 1000px #374151 inset;
+    -webkit-text-fill-color: #F3F4F6;
+  }
+}

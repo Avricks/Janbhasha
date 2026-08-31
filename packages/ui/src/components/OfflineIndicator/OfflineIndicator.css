@@ -1,0 +1,206 @@
+/**
+ * Offline Indicator Styles
+ * Non-intrusive banner with clear status messaging
+ */
+
+.offline-indicator {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  /* Animation */
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+  transform: translateY(-100%);
+  opacity: 0;
+  
+  /* Default: top position */
+  top: 0;
+}
+
+.offline-indicator--bottom {
+  top: auto;
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+/* Visible state */
+.offline-indicator--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.offline-indicator--bottom.offline-indicator--visible {
+  transform: translateY(0);
+}
+
+/* Content */
+.offline-indicator__content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  
+  /* Add safe area for notched devices */
+  padding-top: max(12px, env(safe-area-inset-top));
+  padding-right: max(16px, env(safe-area-inset-right));
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  padding-left: max(16px, env(safe-area-inset-left));
+}
+
+/* Icon */
+.offline-indicator__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Text */
+.offline-indicator__text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Progress Bar */
+.offline-indicator__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.offline-indicator__progress-bar {
+  height: 100%;
+  background-color: currentColor;
+  transition: width 200ms ease-out;
+}
+
+/* Status Variants */
+
+/* Info State (syncing) */
+.offline-indicator--info {
+  background-color: #0EA5E9;
+  color: #FFFFFF;
+}
+
+.offline-indicator--info .offline-indicator__progress {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Warning State (offline) */
+.offline-indicator--warning {
+  background-color: #F59E0B;
+  color: #FFFFFF;
+}
+
+.offline-indicator--warning .offline-indicator__icon {
+  animation: pulse-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Success State (synced) */
+.offline-indicator--success {
+  background-color: #22C55E;
+  color: #FFFFFF;
+}
+
+.offline-indicator--success .offline-indicator__icon {
+  animation: check-icon 400ms ease-out;
+}
+
+@keyframes check-icon {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .offline-indicator--dark {
+    background-color: #1F2937;
+    color: #F3F4F6;
+    border-bottom: 1px solid #4B5563;
+  }
+  
+  .offline-indicator--dark.offline-indicator--info {
+    background-color: #0284C7;
+  }
+  
+  .offline-indicator--dark.offline-indicator--warning {
+    background-color: #D97706;
+  }
+  
+  .offline-indicator--dark.offline-indicator--success {
+    background-color: #16A34A;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .offline-indicator {
+    transition: none;
+  }
+  
+  .offline-indicator--success .offline-indicator__icon,
+  .offline-indicator--warning .offline-indicator__icon {
+    animation: none;
+  }
+  
+  .offline-indicator__progress-bar {
+    transition: none;
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .offline-indicator__content {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .offline-indicator__text {
+    flex-basis: 100%;
+  }
+  
+  /* Ensure adequate padding on mobile */
+  .offline-indicator__content {
+    padding: 12px 16px;
+    min-height: 44px;
+  }
+}
+
+/* Accessibility */
+.offline-indicator[role="status"] {
+  /* Screen reader will announce status changes */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offline-indicator {
+    animation: none;
+  }
+}
