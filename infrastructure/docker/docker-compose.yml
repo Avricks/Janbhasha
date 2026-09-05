@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: janbhasha-postgres
+    environment:
+      POSTGRES_USER: janbhasha
+      POSTGRES_PASSWORD: janbhasha_secure_password
+      POSTGRES_DB: janbhasha
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U janbhasha"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: janbhasha-redis
+    ports:
+      - "6379:6379"
+
+  api-gateway:
+    build:
+      context: ../../
+      dockerfile: infrastructure/docker/Dockerfile.api
+    container_name: janbhasha-api
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://janbhasha:janbhasha_secure_password@postgres:5432/janbhasha
+      JWT_SECRET: janbhasha-super-secret-jwt-key-prod-32-chars!
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  translation-service:
+    build:
+      context: ../../
+      dockerfile: infrastructure/docker/Dockerfile.translation
+    container_name: janbhasha-translation
+    ports:
+      - "3001:3001"
+
+volumes:
+  pgdata:

@@ -1,0 +1,24 @@
+{
+  "language": "santhali",
+  "script": "ol_chiki",
+  "word_order": "SOV",
+  "rules": [
+    {
+      "name": "Subject-Object-Verb (SOV) Order",
+      "description": "In Santhali, the verb consistently comes at the end of the sentence.",
+      "example": {
+        "native": "ᱤᱧ ᱫᱟᱠᱟᱧ ᱡᱚᱢᱮᱫ-ᱟ᱾",
+        "romanized": "In dakan jomed-a.",
+        "english": "I am eating food."
+      }
+    },
+    {
+      "name": "Dual and Plural Number",
+      "description": "Santhali distinguishes between singular, dual (-kin), and plural (-ko).",
+      "example": {
+        "native": "ᱥᱮᱛᱟ (One dog), ᱥᱮᱛᱟᱠᱤᱱ (Two dogs), ᱥᱮᱛᱟᱠᱚ (Many dogs)",
+        "romanized": "Seta (1), Setakin (2), Setako (3+)"
+      }
+    }
+  ]
+}

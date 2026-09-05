@@ -1,0 +1,14 @@
+{
+  "language": "ho",
+  "word_order": "SOV",
+  "rules": [
+    {
+      "name": "Inclusive vs Exclusive First Person",
+      "description": "Ho marks distinction between 'we (including you)' and 'we (excluding you)'.",
+      "example": {
+        "text": "Alan (you and I), Alin (he and I, not you)",
+        "english": "Inclusive vs Exclusive Dual"
+      }
+    }
+  ]
+}

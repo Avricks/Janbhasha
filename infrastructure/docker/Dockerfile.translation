@@ -1,0 +1,27 @@
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json tsconfig.base.json ./
+COPY packages/ ./packages/
+COPY services/translation/ ./services/translation/
+
+RUN npm install
+RUN npm run build --workspace=@janbhasha/domain
+RUN npm run build --workspace=@janbhasha/schemas
+RUN npm run build --workspace=@janbhasha/shared
+RUN npm run build --workspace=@janbhasha/service-translation
+
+FROM node:20-alpine AS runner
+
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/packages/ ./packages/
+COPY --from=builder /app/services/translation/dist ./services/translation/dist
+COPY --from=builder /app/node_modules ./node_modules
+
+EXPOSE 3001
+
+CMD ["node", "services/translation/dist/index.js"]

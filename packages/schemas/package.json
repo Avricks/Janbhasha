@@ -1,0 +1,27 @@
+{
+  "name": "@janbhasha/schemas",
+  "version": "1.0.0",
+  "description": "Zod runtime validation schemas for Janbhasha entities and API payloads",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b -w",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@janbhasha/domain": "^1.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

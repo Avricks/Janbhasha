@@ -1,0 +1,11 @@
+{
+  "language": "mundari",
+  "target": "english",
+  "entries": [
+    { "term": "ᱡᱚᱦᱟᱨ", "transliteration": "Johar", "definition": "Hello, greeting" },
+    { "term": "ᱢᱤᱭᱟᱹᱫᱽ", "transliteration": "Miyad", "definition": "One" },
+    { "term": "ᱵᱟᱨᱤᱭᱟ", "transliteration": "Baria", "definition": "Two" },
+    { "term": "ᱦᱟᱛᱩ", "transliteration": "Hatu", "definition": "Village" },
+    { "term": "ᱥᱤᱝᱵᱚᱸᱜᱟ", "transliteration": "Singbonga", "definition": "Supreme Sun Deity" }
+  ]
+}

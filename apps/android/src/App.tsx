@@ -19,41 +19,36 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { RootStackParamList } from './types/navigation';
 
 // Screens
 import LearnerDashboardScreen from './screens/LearnerDashboardScreen';
 import LessonPlayerScreen from './screens/LessonPlayerScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import AssessmentScreen from './screens/AssessmentScreen';
+import LanguageSelectionScreen from './screens/LanguageSelectionScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   const colorScheme = useColorScheme();
   const isDarkMode = colorScheme === 'dark';
   const [appReady, setAppReady] = useState(false);
-  const [userLanguage, setUserLanguage] = useState('en');
 
   useEffect(() => {
-    // Initialize app
     initializeApp();
   }, []);
 
   const initializeApp = async () => {
     try {
-      // Load user preferences
-      const savedLanguage = await AsyncStorage.getItem('userLanguage');
-      if (savedLanguage) {
-        setUserLanguage(savedLanguage);
-      }
-
-      // Announce app ready to screen readers
       AccessibilityInfo.announceForAccessibility(
         'Janbhasha app loaded successfully. Welcome to your learning journey.',
       );
-
       setAppReady(true);
     } catch (error) {
       console.error('Error initializing app:', error);
-      setAppReady(true); // Continue even if initialization fails
+      setAppReady(true);
     }
   };
 
@@ -67,15 +62,14 @@ const App: React.FC = () => {
         accessible={true}
         accessibilityRole="main"
         accessibilityLabel="Loading Janbhasha app"
-      >
-        {/* Loading screen can be replaced with splash screen */}
-      </View>
+      />
     );
   }
 
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="Dashboard"
         screenOptions={{
           headerShown: true,
           headerStyle: {
@@ -88,16 +82,10 @@ const App: React.FC = () => {
           },
           headerTintColor: isDarkMode ? '#FFFFFF' : '#111827',
           headerBackTitle: 'Back',
-          headerAccessibilityLabel: 'Navigation header',
-          // Ensure minimum touch target of 48px for header buttons
           headerTitleContainerStyle: {
             height: 48,
             justifyContent: 'center',
           },
-          // Enable animated transitions
-          animationEnabled: true,
-          // Ensure gestures work properly
-          gestureEnabled: true,
         }}
       >
         <Stack.Screen
@@ -106,7 +94,6 @@ const App: React.FC = () => {
           options={{
             title: 'Janbhasha',
             headerTitleAlign: 'center',
-            headerAccessibilityLabel: 'Learner dashboard header',
           }}
         />
 
@@ -115,8 +102,38 @@ const App: React.FC = () => {
           component={LessonPlayerScreen}
           options={{
             title: 'Lesson',
-            headerBackTitle: 'Dashboard',
-            headerAccessibilityLabel: 'Lesson player header',
+          }}
+        />
+
+        <Stack.Screen
+          name="Assessment"
+          component={AssessmentScreen}
+          options={{
+            title: 'Assessment',
+          }}
+        />
+
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{
+            title: 'Settings',
+          }}
+        />
+
+        <Stack.Screen
+          name="LanguageSelection"
+          component={LanguageSelectionScreen}
+          options={{
+            title: 'Select Language',
+          }}
+        />
+
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{
+            title: 'My Profile',
           }}
         />
       </Stack.Navigator>

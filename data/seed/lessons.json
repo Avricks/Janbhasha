@@ -1,0 +1,44 @@
+[
+  {
+    "id": "les_seed_01",
+    "courseId": "crs_sat_01",
+    "moduleId": "mod_01",
+    "title": "Lesson 1: Introduction to Ol Chiki",
+    "nativeTitle": "ᱞᱮᱥᱚᱱ ᱑: ᱚᱞ ᱪᱤᱠᱤ ᱩᱯᱨᱩᱢ",
+    "languageId": "sat",
+    "description": "Learn the historical origin and primary vowel inventory of Ol Chiki script.",
+    "difficulty": "A1",
+    "estimatedMinutes": 15,
+    "order": 1,
+    "sections": [
+      {
+        "id": "sec_01",
+        "title": "Vowels in Ol Chiki",
+        "content": "Pandit Raghunath Murmu created the Ol Chiki script in 1925 specifically designed for Santhali phonetics.",
+        "nativeScriptContent": "ᱚᱞ ᱪᱤᱠᱤ ᱫᱚ ᱑᱙᱒᱕ ᱥᱟᱞ ᱨᱮ ᱯᱚᱸᱰᱮᱛ ᱨᱟᱹᱜᱷᱩᱱᱟᱛᱷ ᱢᱩᱨᱢᱩ ᱛᱤᱠᱤᱱ ᱠᱤᱱ ᱵᱮᱱᱟᱣ ᱞᱮᱫ-ᱟ᱾",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": "les_seed_02",
+    "courseId": "crs_sat_01",
+    "moduleId": "mod_01",
+    "title": "Lesson 2: Numbers from 1 to 10",
+    "nativeTitle": "ᱞᱮᱥᱚᱱ ᱒: ᱢᱤᱫ ᱠᱷᱚᱱ ᱜᱮᱞ ᱦᱟᱹᱵᱤᱡ",
+    "languageId": "sat",
+    "description": "Master numerical digits and counting in Santhali.",
+    "difficulty": "A1",
+    "estimatedMinutes": 12,
+    "order": 2,
+    "sections": [
+      {
+        "id": "sec_02",
+        "title": "Numbers 1-5",
+        "content": "Mit (1), Bar (2), Pe (3), Pun (4), More (5)",
+        "nativeScriptContent": "᱑ (ᱢᱤᱫ), ᱒ (ᱵᱟᱨ), ᱓ (ᱯᱮ), ᱔ (ᱯᱩᱱ), ᱕ (ᱢᱚᱬᱮ)",
+        "order": 1
+      }
+    ]
+  }
+]

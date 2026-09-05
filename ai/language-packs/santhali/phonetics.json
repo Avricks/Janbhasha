@@ -1,0 +1,16 @@
+{
+  "script": "ol_chiki",
+  "vowels": [
+    { "char": "ᱚ", "name": "LA", "ipa": "/ɔ/", "type": "vowel" },
+    { "char": "ᱟ", "name": "AA", "ipa": "/a/", "type": "vowel" },
+    { "char": "ᱤ", "name": "I", "ipa": "/i/", "type": "vowel" },
+    { "char": "ᱩ", "name": "U", "ipa": "/u/", "type": "vowel" },
+    { "char": "ᱮ", "name": "E", "ipa": "/e/", "type": "vowel" },
+    { "char": "ᱳ", "name": "O", "ipa": "/o/", "type": "vowel" }
+  ],
+  "modifiers": [
+    { "char": "ᱸ", "name": "MU TUDDAG", "description": "Nasalization diacritic" },
+    { "char": "ᱺ", "name": "GOHLO TUDDAG", "description": "Deep throat sound diacritic" },
+    { "char": "ᱻ", "name": "RELA", "description": "Vowel prolongation symbol" }
+  ]
+}

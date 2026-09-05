@@ -1,0 +1,15 @@
+asr:
+  model_name: "janbhasha-wav2vec2-santhali"
+  base_model: "facebook/wav2vec2-xls-r-300m"
+  sampling_rate: 16000
+  feature_size: 1
+  ctc_loss_reduction: "mean"
+  vocab_size: 64
+tts:
+  model_name: "janbhasha-fastpitch-santhali"
+  architecture: "FastPitch"
+  vocoder: "HiFi-GAN"
+  sampling_rate: 22050
+  n_mel_channels: 80
+  pitch_mean: 210.5
+  pitch_std: 55.2

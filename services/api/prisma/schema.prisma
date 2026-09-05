@@ -1,0 +1,192 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  LEARNER
+  EDUCATOR
+  ADMINISTRATOR
+  GUEST
+}
+
+enum AgeGroup {
+  UNDER_13
+  TEEN
+  ADULT
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  username        String   @unique
+  passwordHash    String
+  fullName        String
+  role            Role     @default(LEARNER)
+  ageGroup        AgeGroup @default(ADULT)
+  nativeLanguage  String
+  targetLanguages String[]
+  avatarUrl       String?
+  phoneNumber     String?
+  parentEmail     String?
+  isActive        Boolean  @default(true)
+  isEmailVerified Boolean  @default(false)
+  
+  // Preferences stored as JSON
+  preferences     Json     @default("{}")
+  
+  // Stats
+  currentStreak   Int      @default(0)
+  longestStreak   Int      @default(0)
+  totalPoints     Int      @default(0)
+
+  // Relations
+  learningRecords LearningRecord[]
+  quizResults     QuizResult[]
+  refreshTokens   RefreshToken[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([email])
+  @@index([username])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model Course {
+  id                    String   @id @default(uuid())
+  title                 String
+  nativeTitle           String
+  targetLanguageId      String
+  instructionLanguageId String
+  description           String
+  difficulty            String
+  thumbnailUrl          String?
+  tags                  String[]
+  isPublished           Boolean  @default(false)
+  version               Int      @default(1)
+
+  modules               Module[]
+  lessons               Lesson[]
+
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Module {
+  id          String   @id @default(uuid())
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  title       String
+  nativeTitle String
+  languageId  String
+  description String
+  order       Int
+  difficulty  String
+
+  lessons     Lesson[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([courseId])
+}
+
+model Lesson {
+  id               String   @id @default(uuid())
+  courseId         String
+  course           Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  moduleId         String
+  module           Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  title            String
+  nativeTitle      String
+  languageId       String
+  description      String
+  difficulty       String
+  estimatedMinutes Int
+  order            Int
+  sections         Json     @default("[]")
+  assets           Json     @default("[]")
+  isPublished      Boolean  @default(false)
+  version          Int      @default(1)
+  createdBy        String
+
+  learningRecords  LearningRecord[]
+  quizzes          Quiz[]
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([courseId])
+  @@index([moduleId])
+}
+
+model LearningRecord {
+  id               String   @id @default(uuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId         String
+  lesson           Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  progressPercent  Int      @default(0)
+  timeSpentSeconds Int      @default(0)
+  isCompleted      Boolean  @default(false)
+  completedAt      DateTime?
+  lastAccessedAt   DateTime @default(now())
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+}
+
+model Quiz {
+  id                  String   @id @default(uuid())
+  lessonId            String?
+  lesson              Lesson?  @relation(fields: [lessonId], references: [id], onDelete: SetNull)
+  title               String
+  description         String   @default("")
+  passingScorePercent Int      @default(60)
+  timeLimitSeconds    Int?
+  questions           Json     @default("[]")
+  isAdaptive          Boolean  @default(false)
+  maxAttempts         Int?
+
+  results             QuizResult[]
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model QuizResult {
+  id                  String   @id @default(uuid())
+  quizId              String
+  quiz                Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  userId              String
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attemptNumber       Int      @default(1)
+  responses           Json     @default("[]")
+  totalScore          Int
+  maxPossibleScore    Int
+  scorePercentage     Float
+  isPassed            Boolean
+  estimatedAbilityTheta Float?
+  completedAt         DateTime @default(now())
+
+  @@index([userId])
+  @@index([quizId])
+}

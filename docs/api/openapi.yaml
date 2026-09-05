@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Janbhasha Multi-Service API
+  description: API Gateway for the Janbhasha Vernacular Pedagogy Platform
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Local Gateway
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+                fullName:
+                  type: string
+      responses:
+        '201':
+          description: User registered successfully
+
+  /auth/login:
+    post:
+      summary: Login and obtain JWT tokens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                emailOrUsername:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Authentication successful
+
+  /lessons:
+    get:
+      summary: List pedagogical lessons
+      parameters:
+        - name: languageId
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of lessons

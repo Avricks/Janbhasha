@@ -1,0 +1,26 @@
+{
+  "name": "@janbhasha/api-client",
+  "version": "1.0.0",
+  "description": "Typed HTTP API client SDK for Janbhasha services with offline support",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b -w",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@janbhasha/domain": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

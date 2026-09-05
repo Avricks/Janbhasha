@@ -1,0 +1,18 @@
+[
+  {
+    "id": "quiz_seed_01",
+    "lessonId": "les_seed_01",
+    "title": "Ol Chiki Origins Quiz",
+    "passingScorePercent": 60,
+    "questions": [
+      {
+        "prompt": "Who invented the Ol Chiki script?",
+        "choices": [
+          { "text": "Pandit Raghunath Murmu", "isCorrect": true },
+          { "text": "Birsa Munda", "isCorrect": false },
+          { "text": "Sidhu Kanhu", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]

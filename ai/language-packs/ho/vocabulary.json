@@ -1,0 +1,9 @@
+[
+  { "id": "hoc_001", "script": "𑢹𑣉 ᱡᱚᱦᱟᱨ", "romanized": "Johar", "english": "Hello", "hindi": "नमस्ते" },
+  { "id": "hoc_002", "script": "𑣡", "romanized": "Miyad", "english": "One", "hindi": "एक" },
+  { "id": "hoc_003", "script": "𑣢", "romanized": "Baria", "english": "Two", "hindi": "दो" },
+  { "id": "hoc_004", "script": "𑣣", "romanized": "Apea", "english": "Three", "hindi": "तीन" },
+  { "id": "hoc_005", "script": "𑣤", "romanized": "Upunia", "english": "Four", "hindi": "चार" },
+  { "id": "hoc_006", "script": "𑣥", "romanized": "Moya", "english": "Five", "hindi": "पाँच" },
+  { "id": "hoc_007", "script": "ᱫᱟᱜ", "romanized": "Daa", "english": "Water", "hindi": "पानी" }
+]

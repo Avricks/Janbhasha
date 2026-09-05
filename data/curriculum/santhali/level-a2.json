@@ -1,0 +1,17 @@
+{
+  "level": "A2",
+  "language": "santhali",
+  "title": "Elementary Santhali Pedagogy",
+  "modules": [
+    {
+      "id": "mod_a2_01",
+      "title": "Module 1: Tenses and Verb Conjugation",
+      "competency": "Forming past, present continuous, and future sentences"
+    },
+    {
+      "id": "mod_a2_02",
+      "title": "Module 2: Seasonal Agricultural Cycle",
+      "competency": "Vocabulary of monsoon, sowing, harvesting, and cattle"
+    }
+  ]
+}

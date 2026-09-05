@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "janbhasha-api"
+    static_configs:
+      - targets: ["api-gateway:3000"]
+
+  - job_name: "janbhasha-translation"
+    static_configs:
+      - targets: ["translation-service:3001"]

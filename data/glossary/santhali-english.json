@@ -1,0 +1,13 @@
+{
+  "language": "santhali",
+  "target": "english",
+  "entries": [
+    { "term": "ᱡᱚᱦᱟᱨ", "transliteration": "Johar", "definition": "Hello, greeting, salutation" },
+    { "term": "ᱢᱤᱫ", "transliteration": "Mit", "definition": "One (1)" },
+    { "term": "ᱵᱟᱨ", "transliteration": "Bar", "definition": "Two (2)" },
+    { "term": "ᱫᱟᱜ", "transliteration": "Dak", "definition": "Water, rain" },
+    { "term": "ᱫᱟᱠᱟ", "transliteration": "Daka", "definition": "Cooked rice" },
+    { "term": "ᱥᱤᱝᱪᱟᱸᱫᱚ", "transliteration": "Singchando", "definition": "Sun, supreme deity of light" },
+    { "term": "ᱧᱤᱸᱫᱟᱹᱪᱟᱸᱫᱚ", "transliteration": "Nindachando", "definition": "Moon" }
+  ]
+}

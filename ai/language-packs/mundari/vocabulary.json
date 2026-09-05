@@ -1,0 +1,9 @@
+[
+  { "id": "unr_001", "script": "ᱡᱚᱦᱟᱨ", "romanized": "Johar", "english": "Hello / Salutation", "hindi": "नमस्ते" },
+  { "id": "unr_002", "script": "ᱢᱤᱭᱟᱹᱫᱽ", "romanized": "Miyad", "english": "One", "hindi": "एक" },
+  { "id": "unr_003", "script": "ᱵᱟᱨᱤᱭᱟ", "romanized": "Baria", "english": "Two", "hindi": "दो" },
+  { "id": "unr_004", "script": "ᱟᱯᱤᱭᱟ", "romanized": "Apia", "english": "Three", "hindi": "तीन" },
+  { "id": "unr_005", "script": "ᱫᱟᱜ", "romanized": "Da", "english": "Water", "hindi": "पानी" },
+  { "id": "unr_006", "script": "ᱢᱟᱱᱰᱤ", "romanized": "Mandi", "english": "Cooked food / Rice", "hindi": "भात" },
+  { "id": "unr_007", "script": "ᱚᱲᱟᱜ", "romanized": "Orah", "english": "House", "hindi": "घर" }
+]

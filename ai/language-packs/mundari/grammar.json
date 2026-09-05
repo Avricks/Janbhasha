@@ -1,0 +1,14 @@
+{
+  "language": "mundari",
+  "word_order": "SOV",
+  "rules": [
+    {
+      "name": "Agglutinative Morphology",
+      "description": "Mundari builds complex verb forms by chaining personal markers and tense infixes.",
+      "example": {
+        "text": "Seno-tan-a-ing",
+        "english": "I am going."
+      }
+    }
+  ]
+}

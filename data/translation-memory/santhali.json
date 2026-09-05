@@ -1,0 +1,6 @@
+[
+  { "source": "Good morning", "target": "ᱥᱟᱜᱩᱱ ᱥᱮᱛᱟᱜ", "notes": "Standard morning salutation" },
+  { "source": "What is your name?", "target": "ᱟᱢᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱪᱮᱫ?", "notes": "Informal singular inquiry" },
+  { "source": "My name is Soren.", "target": "ᱤᱧᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱥᱚᱨᱮᱱ ᱠᱟᱱᱟ᱾", "notes": "First person response" },
+  { "source": "Where are you going?", "target": "ᱟᱢ ᱫᱚ ᱚᱠᱟᱛᱮᱢ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ?", "notes": "Continuous question" }
+]

@@ -1,0 +1,17 @@
+[
+  { "id": "sat_001", "script": "ᱡᱚᱦᱟᱨ", "romanized": "Johar", "english": "Hello / Greetings", "hindi": "नमस्ते", "category": "greetings" },
+  { "id": "sat_002", "script": "ᱥᱟᱜᱩᱱ ᱥᱮᱛᱟᱜ", "romanized": "Sagun Setag", "english": "Good morning", "hindi": "शुभ प्रभात", "category": "greetings" },
+  { "id": "sat_003", "script": "ᱥᱟᱨᱦᱟᱣ", "romanized": "Sarhao", "english": "Thank you", "hindi": "धन्यवाद", "category": "expressions" },
+  { "id": "sat_004", "script": "ᱢᱤᱫ", "romanized": "Mit", "english": "One", "hindi": "एक", "category": "numbers" },
+  { "id": "sat_005", "script": "ᱵᱟᱨ", "romanized": "Bar", "english": "Two", "hindi": "दो", "category": "numbers" },
+  { "id": "sat_006", "script": "ᱯᱮ", "romanized": "Pe", "english": "Three", "hindi": "तीन", "category": "numbers" },
+  { "id": "sat_007", "script": "ᱯᱩᱱ", "romanized": "Pun", "english": "Four", "hindi": "चार", "category": "numbers" },
+  { "id": "sat_008", "script": "ᱢᱚᱬᱮ", "romanized": "More", "english": "Five", "hindi": "पाँच", "category": "numbers" },
+  { "id": "sat_009", "script": "ᱫᱟᱜ", "romanized": "Dak", "english": "Water", "hindi": "पानी", "category": "nature" },
+  { "id": "sat_010", "script": "ᱫᱟᱠᱟ", "romanized": "Daka", "english": "Cooked rice / Food", "hindi": "भात / खाना", "category": "food" },
+  { "id": "sat_011", "script": "ᱚᱲᱟᱜ", "romanized": "Orak", "english": "House / Home", "hindi": "घर", "category": "home" },
+  { "id": "sat_012", "script": "ᱟᱯᱟᱛ", "romanized": "Apat", "english": "Father", "hindi": "पिता", "category": "family" },
+  { "id": "sat_013", "script": "ᱮᱸᱜᱟᱛ", "romanized": "Engat", "english": "Mother", "hindi": "माता", "category": "family" },
+  { "id": "sat_014", "script": "ᱵᱚᱭᱦᱟ", "romanized": "Boyha", "english": "Brother / Sibling", "hindi": "भाई", "category": "family" },
+  { "id": "sat_015", "script": "ᱢᱤᱥᱤ", "romanized": "Misi", "english": "Sister", "hindi": "बहन", "category": "family" }
+]

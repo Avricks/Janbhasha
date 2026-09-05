@@ -1,0 +1,32 @@
+[
+  {
+    "id": "usr_seed_01",
+    "email": "learner@janbhasha.org",
+    "username": "sita_soren",
+    "fullName": "Sita Soren",
+    "role": "learner",
+    "nativeLanguage": "sat",
+    "targetLanguages": ["sat", "eng"],
+    "currentStreak": 7,
+    "totalPoints": 480
+  },
+  {
+    "id": "usr_seed_02",
+    "email": "teacher@janbhasha.org",
+    "username": "ramdas_murmu",
+    "fullName": "Ramdas Murmu",
+    "role": "educator",
+    "nativeLanguage": "sat",
+    "targetLanguages": ["sat", "unr"],
+    "schoolOrCenterName": "Dumka Model School"
+  },
+  {
+    "id": "usr_seed_03",
+    "email": "admin@janbhasha.org",
+    "username": "admin_jharkhand",
+    "fullName": "State Pedagogy Admin",
+    "role": "administrator",
+    "nativeLanguage": "hin",
+    "targetLanguages": ["sat", "unr", "hoc"]
+  }
+]

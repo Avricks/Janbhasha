@@ -1,0 +1,22 @@
+model_name: "janbhasha-nmt-munda-base"
+base_model: "facebook/mbart-large-50"
+task: "translation"
+source_languages:
+  - "en"
+  - "hi"
+target_languages:
+  - "sat" # Santhali
+  - "unr" # Mundari
+  - "hoc" # Ho
+training:
+  learning_rate: 3.0e-5
+  batch_size: 16
+  max_source_length: 128
+  max_target_length: 128
+  warmup_steps: 500
+  weight_decay: 0.01
+  fp16: true
+quantization:
+  engine: "onnxruntime"
+  format: "int8"
+  dynamic: true
