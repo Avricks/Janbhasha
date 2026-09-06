@@ -1,0 +1,16 @@
+{
+  "name": "Janbhasha Vernacular Pedagogy Platform",
+  "short_name": "Janbhasha",
+  "description": "AI-powered vernacular pedagogy and literacy acceleration platform for Santhali, Mundari, and Ho indigenous languages.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F5F0",
+  "theme_color": "#1E3A2F",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

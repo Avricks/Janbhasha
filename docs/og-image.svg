@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#F7F5F0"/>
+  <rect x="40" y="40" width="1120" height="550" rx="4" fill="#EFECE4" stroke="#DCD8CE" stroke-width="2"/>
+  <rect x="80" y="80" width="48" height="48" rx="2" fill="#1E3A2F"/>
+  <text x="96" y="112" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="700" fill="#F7F5F0">JB</text>
+  <text x="148" y="112" font-family="'Newsreader', Georgia, serif" font-size="28" font-weight="600" fill="#181A1C">JANBHASHA</text>
+  <text x="80" y="240" font-family="'Newsreader', Georgia, serif" font-size="56" font-weight="500" fill="#181A1C">
+    AI-Powered Vernacular Pedagogy Platform
+  </text>
+  <text x="80" y="310" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" fill="#4A5158">
+    Offline-first literacy acceleration for Santhali, Mundari, and Ho indigenous languages.
+  </text>
+  <line x1="80" y1="370" x2="1120" y2="370" stroke="#C8C3B5" stroke-width="1"/>
+  <text x="80" y="430" font-family="'JetBrains Mono', monospace" font-size="16" fill="#7A4B27">
+    [OFFLINE DELTA SYNC]  [NATIVE SCRIPT NMT]  [IRT 3PL PEDAGOGY]  [CONFORMER ACOUSTICS]
+  </text>
+  <text x="80" y="520" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#6E7680">
+    Tribal Pedagogy and Technology Initiative | Jharkhand, India
+  </text>
+</svg>

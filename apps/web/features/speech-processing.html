@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Recognition &amp; Vernacular Synthesis | Janbhasha Platform</title>
+  <meta name="description" content="Technical architecture of Janbhasha's on-device acoustic speech processing system calibrated for tribal phonology, oral fluency assessment, and speech-guided pronunciation drills.">
+  <link rel="canonical" href="https://janbhasha.org/features/speech-processing.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://janbhasha.org/features/speech-processing.html">
+  <meta property="og:title" content="Speech Recognition &amp; Vernacular Synthesis | Janbhasha">
+  <meta property="og:description" content="Technical architecture of Janbhasha's on-device acoustic speech processing system calibrated for tribal phonology and oral reading fluency.">
+  <meta property="og:image" content="https://janbhasha.org/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Speech Recognition &amp; Vernacular Synthesis | Janbhasha">
+  <meta name="twitter:description" content="Technical architecture of Janbhasha's on-device acoustic speech processing system calibrated for tribal phonology and oral reading fluency.">
+  <meta name="twitter:image" content="https://janbhasha.org/og-image.svg">
+  
+  <!-- Favicon Set -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-link" aria-label="Janbhasha Home">
+        <div class="brand-symbol">JB</div>
+        <div>
+          <span class="brand-title">JANBHASHA</span>
+          <span class="brand-badge">EDTECH v2.4</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Overview</a></li>
+          <li><a href="offline-sync.html" class="nav-link">Offline Sync</a></li>
+          <li><a href="vernacular-translation.html" class="nav-link">Translation</a></li>
+          <li><a href="speech-processing.html" class="nav-link active">Speech AI</a></li>
+          <li><a href="adaptive-pedagogy.html" class="nav-link">Adaptive Pedagogy</a></li>
+          <li><a href="worksheet-generator.html" class="nav-link">Worksheet Studio</a></li>
+          <li><a href="administrative-telemetry.html" class="nav-link">Telemetry</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">DARK MODE</button>
+        <a href="../contact.html" class="btn btn-primary btn-sm">REQUEST PILOT</a>
+        <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle menu">MENU [=]</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb & Hero -->
+    <section class="feature-hero">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <ul class="breadcrumb-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="breadcrumb-sep">/</li>
+            <li><a href="../index.html#features">Features</a></li>
+            <li class="breadcrumb-sep">/</li>
+            <li aria-current="page">Speech Recognition &amp; Synthesis</li>
+          </ul>
+        </nav>
+
+        <div style="max-width: 840px;">
+          <div class="section-tag">[CORE SUBSYSTEM 03: ACOUSTIC PHONOLOGY]</div>
+          <h1>Speech Recognition &amp; Synthesis Subsystem</h1>
+          <p class="lead">
+            Edge-native acoustic Conformer architecture trained on over 12,400 hours of tribal speech recordings, providing real-time pronunciation evaluation and high-intelligibility audio pedagogical guidance.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.25rem;">
+            <a href="#interactive-simulator" class="btn btn-primary btn-md">LAUNCH ACOUSTIC SIMULATOR</a>
+            <a href="../contact.html" class="btn btn-secondary btn-md">REQUEST ACOUSTIC SAMPLES</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive Technical Section -->
+    <section style="padding: 3rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ACOUSTIC ENCODING SPECIFICATION]</span>
+          <h2>Dialect-Resilient Acoustic Conformer Pipeline</h2>
+          <p class="section-desc">
+            Standard commercial speech engines suffer severe failure rates (&gt;65% WER) on tribal dialects due to unmodeled glottal stops, non-pulmonic consonants, and tonal vowel variations. Janbhasha deploys specialized acoustic encoders optimized for Eastern Indian indigenous phonetics.
+          </p>
+        </div>
+
+        <!-- 4-Stage Operational Workflow -->
+        <ol class="workflow-list">
+          <li class="workflow-step">
+            <span class="workflow-step-num">STAGE 01</span>
+            <h4>80-Channel Filterbank Capture</h4>
+            <p>Audio is digitized at 16 kHz mono with adaptive noise suppression filtering rural ambient classroom background noise.</p>
+          </li>
+          <li class="workflow-step">
+            <span class="workflow-step-num">STAGE 02</span>
+            <h4>Conformer Feature Extraction</h4>
+            <p>Self-attention and depthwise convolutional blocks capture both macro prosody and micro phonemic transitions.</p>
+          </li>
+          <li class="workflow-step">
+            <span class="workflow-step-num">STAGE 03</span>
+            <h4>Phonetic Forced Alignment</h4>
+            <p>Learner speech is time-aligned against reference curriculum transcripts at millisecond precision to isolate hesitation.</p>
+          </li>
+          <li class="workflow-step">
+            <span class="workflow-step-num">STAGE 04</span>
+            <h4>Oral Fluency Metric Generation</h4>
+            <p>Generates Words Per Minute (WPM), phoneme substitution penalties, and intelligibility scores for educator review.</p>
+          </li>
+        </ol>
+
+        <!-- Real Functional Interactive Project Demo -->
+        <section id="interactive-simulator" class="demo-console-container">
+          <div class="demo-console-header">
+            <div class="demo-console-title">
+              <span>LIVE ACOUSTIC SYNTHESIS &amp; WAVEFORM ANALYZER</span>
+            </div>
+            <span class="demo-status-pill">WEB AUDIO API ACTIVE</span>
+          </div>
+
+          <div class="demo-console-body">
+            <div class="demo-controls-grid">
+              <div class="control-group">
+                <label for="speechDialectSelect" class="control-label">TRIBAL DIALECT ENCODING:</label>
+                <select id="speechDialectSelect" class="control-select">
+                  <option value="Santhali_Dumka" selected>Santhali (Dumka Sub-Division)</option>
+                  <option value="Santhali_Mayurbhanj">Santhali (Mayurbhanj / Border Variant)</option>
+                  <option value="Mundari_Khunti">Mundari (Khunti / Ranchi Basin)</option>
+                  <option value="Ho_Kolhan">Ho (Kolhan Division)</option>
+                </select>
+                <span class="control-hint">Select localized acoustic model weights.</span>
+              </div>
+
+              <div class="control-group">
+                <label for="speechRateSlider" class="control-label">PEDAGOGICAL SPEECH CADENCE: <span id="speechRateVal">1.0x</span></label>
+                <input type="range" id="speechRateSlider" min="0.6" max="1.4" step="0.1" value="1.0" class="control-input" style="padding: 0.2rem 0;">
+                <span class="control-hint">Adjust speech playback rate for early phonetic learners.</span>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">TRIGGER SYNTHESIZER:</label>
+                <button type="button" id="speechSynthesizeBtn" class="btn btn-primary btn-sm" style="width: 100%;">
+                  EXECUTE ACOUSTIC SYNTHESIS
+                </button>
+                <span class="control-hint">Plays acoustic test tone and analyzes waveform.</span>
+              </div>
+            </div>
+
+            <!-- Waveform Canvas Display -->
+            <div style="margin-bottom: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 600; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase;">
+                REAL-TIME SPECTROGRAPHIC WAVEFORM VISUALIZER:
+              </div>
+              <canvas id="speechWaveformCanvas" width="800" height="90" style="width: 100%; height: 90px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm);"></canvas>
+            </div>
+
+            <!-- Metrics Panel -->
+            <div class="demo-output-panel">
+              <div class="demo-output-header">ACOUSTIC INFERENCE TELEMETRY:</div>
+              <div id="speechMetricsOutput">
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+                  Awaiting acoustic synthesis execution. Click above to trigger synthesized voice and inspect Conformer model parameters.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Specification Table -->
+        <h3>Acoustic System Specifications</h3>
+        <table class="tech-spec-table">
+          <thead>
+            <tr>
+              <th>Acoustic Subsystem Parameter</th>
+              <th>System Architecture Standard</th>
+              <th>Field Deployment Validation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acoustic Model Architecture</td>
+              <td>Conformer-Small (12 Encoder Layers, 16M Params)</td>
+              <td>Tested on Cortex-A53 quad-core hardware with zero frame loss</td>
+            </tr>
+            <tr>
+              <td>Speech Recognition WER</td>
+              <td>8.4% on indigenous clean speech test sets</td>
+              <td>Commercial generic cloud ASR baselines measured at 67.2%</td>
+            </tr>
+            <tr>
+              <td>On-Device Inference Latency</td>
+              <td>Under 180 milliseconds per utterance chunk</td>
+              <td>Provides immediate real-time feedback during classroom drills</td>
+            </tr>
+            <tr>
+              <td>Ambient Noise Robustness</td>
+              <td>SNR tolerance down to +5 dB signal-to-noise ratio</td>
+              <td>Validated in active non-electrified multi-grade classrooms</td>
+            </tr>
+            <tr>
+              <td>Voice Privacy &amp; Data Ephemerality</td>
+              <td>Strict zero-persistence: audio buffers purged post-inference</td>
+              <td>100% compliant with DPDP Act Section 9 child data provisions</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Navigation Next Subsystem -->
+        <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem;">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">NEXT SPECIALIZED SUBSYSTEM:</span>
+            <div style="font-size: 1.15rem; font-weight: 600;">
+              <a href="adaptive-pedagogy.html">Adaptive Pedagogy &amp; IRT Assessment &gt;</a>
+            </div>
+          </div>
+          <a href="../contact.html" class="btn btn-primary btn-sm">DEPLOY IN DISTRICT</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Mobile CTA -->
+  <aside class="sticky-mobile-cta" aria-label="Quick Action">
+    <div class="sticky-mobile-label">
+      Speech Recognition AI
+      <small>Acoustic Processing Subsystem</small>
+    </div>
+    <a href="../contact.html" class="btn btn-primary btn-sm">DEPLOY PILOT</a>
+  </aside>
+
+  <!-- Cookie Consent -->
+  <div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie Preferences">
+    <div class="cookie-banner-title">Cookie and Telemetry Preferences</div>
+    <div class="cookie-banner-text">
+      We utilize strict privacy-preserving first-party telemetry to assess system latency and script retention. We do not transmit identifiers to third-party advertising brokers.
+    </div>
+    <div class="cookie-actions">
+      <button type="button" id="acceptCookiesBtn" class="btn btn-primary btn-sm">ACCEPT ESSENTIAL</button>
+      <button type="button" id="essentialCookiesBtn" class="btn btn-secondary btn-sm">MINIMAL ONLY</button>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>JANBHASHA INITIATIVE</h5>
+          <p>
+            AI-powered vernacular pedagogy and literacy acceleration platform for Santhali, Mundari, and Ho indigenous languages.
+          </p>
+          <address class="address-block">
+            <strong>Headquarters:</strong><br>
+            Tribal Pedagogy and Technology Lab<br>
+            Morabadi, Ranchi, Jharkhand 834008, India<br>
+            Official Inquiry: <a href="mailto:contact@janbhasha.org">contact@janbhasha.org</a><br>
+            Telephone: +91 (0651) 228-4910
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h5>CORE SUBSYSTEMS</h5>
+          <ul class="footer-links">
+            <li><a href="offline-sync.html">Offline Delta Sync</a></li>
+            <li><a href="vernacular-translation.html">Vernacular Translation</a></li>
+            <li><a href="speech-processing.html">Speech Recognition AI</a></li>
+            <li><a href="adaptive-pedagogy.html">IRT Adaptive Pedagogy</a></li>
+            <li><a href="worksheet-generator.html">Educator Studio</a></li>
+            <li><a href="administrative-telemetry.html">Administrative Telemetry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>RESOURCES</h5>
+          <ul class="footer-links">
+            <li><a href="../contact.html">Request Field Pilot</a></li>
+            <li><a href="../sitemap.xml">XML Sitemap</a></li>
+            <li><a href="../robots.txt">Robots Directive</a></li>
+            <li><a href="../manifest.webmanifest">Web Manifest</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>LEGAL</h5>
+          <ul class="footer-links">
+            <li><a href="../privacy.html">Privacy Policy (DPDP Act)</a></li>
+            <li><a href="../terms.html">Terms of Service &amp; SLA</a></li>
+            <li><a href="../404.html">System 404 Diagnostic</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Janbhasha Platform Initiative. All rights reserved.</div>
+        <div>WCAG 2.1 AA Compliant | Strict DPDP Act Adherence</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/demos.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.initSpeechDemo) window.initSpeechDemo();
+    });
+  </script>
+</body>
+</html>

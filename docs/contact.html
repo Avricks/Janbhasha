@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deploy Field Pilot &amp; Institutional Inquiry | Janbhasha Platform</title>
+  <meta name="description" content="Initiate district-wide vernacular pedagogy implementation, request hardware specifications, or schedule teacher onboarding with the Janbhasha engineering team.">
+  <link rel="canonical" href="https://janbhasha.org/contact.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janbhasha.org/contact.html">
+  <meta property="og:title" content="Deploy Field Pilot | Janbhasha">
+  <meta property="og:description" content="Initiate district-wide vernacular pedagogy implementation or request hardware specifications.">
+  <meta property="og:image" content="https://janbhasha.org/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deploy Field Pilot | Janbhasha">
+  <meta name="twitter:description" content="Initiate district-wide vernacular pedagogy implementation or request hardware specifications.">
+  <meta name="twitter:image" content="https://janbhasha.org/og-image.svg">
+  
+  <!-- Favicon Set -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Janbhasha Home">
+        <div class="brand-symbol">JB</div>
+        <div>
+          <span class="brand-title">JANBHASHA</span>
+          <span class="brand-badge">EDTECH v2.4</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Overview</a></li>
+          <li><a href="features/offline-sync.html" class="nav-link">Offline Sync</a></li>
+          <li><a href="features/vernacular-translation.html" class="nav-link">Translation</a></li>
+          <li><a href="features/speech-processing.html" class="nav-link">Speech AI</a></li>
+          <li><a href="features/adaptive-pedagogy.html" class="nav-link">Adaptive Pedagogy</a></li>
+          <li><a href="features/worksheet-generator.html" class="nav-link">Worksheet Studio</a></li>
+          <li><a href="features/administrative-telemetry.html" class="nav-link">Telemetry</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">DARK MODE</button>
+        <a href="contact.html" class="btn btn-primary btn-sm active">REQUEST PILOT</a>
+        <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle menu">MENU [=]</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="feature-hero">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <div class="section-tag">[INSTITUTIONAL INTAKE &amp; PILOT DEPLOYMENT]</div>
+          <h1>Initiate District Field Implementation</h1>
+          <p class="lead">
+            Submit your institution's technical requirements to schedule an edge hardware readiness audit, request teacher training workshops, or integrate state curriculum textbooks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 2rem 0 4rem;">
+      <div class="container">
+        <!-- Interactive Form with Strict Error States -->
+        <div class="form-card">
+          <div id="formGlobalBanner" class="form-global-banner" role="alert"></div>
+
+          <form id="pilotRequestForm" data-validate="true" novalidate>
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">
+                  OFFICIAL CONTACT NAME <span class="required-indicator">*</span>
+                </label>
+                <input type="text" id="fullName" name="fullName" class="form-input" required placeholder="e.g. Dr. Ramesh Soren" autocomplete="name">
+                <div class="form-error-message">Please enter your official contact name.</div>
+              </div>
+
+              <!-- Institutional Role -->
+              <div class="form-group">
+                <label for="officialRole" class="form-label">
+                  INSTITUTIONAL ROLE <span class="required-indicator">*</span>
+                </label>
+                <select id="officialRole" name="officialRole" class="form-select" required>
+                  <option value="">-- Select Administrative Capacity --</option>
+                  <option value="district_officer">District Education Officer (DEO / BEO)</option>
+                  <option value="school_principal">School Principal / Headmaster</option>
+                  <option value="tribal_foundation">Tribal Welfare Foundation Director</option>
+                  <option value="linguist_researcher">University Linguistic Researcher</option>
+                  <option value="developer">Open Source Contributor / Technologist</option>
+                </select>
+                <div class="form-error-message">Please select your administrative capacity.</div>
+              </div>
+
+              <!-- Institutional Email -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  INSTITUTIONAL EMAIL ADDRESS <span class="required-indicator">*</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-input" required placeholder="name@gov.in or name@institution.org" autocomplete="email">
+                <div class="form-error-message">Please provide a valid institutional email.</div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="phone" class="form-label">
+                  OFFICE CONTACT NUMBER <span class="required-indicator">*</span>
+                </label>
+                <input type="tel" id="phone" name="phone" class="form-input" required placeholder="+91 94311 XXXXX" autocomplete="tel">
+                <div class="form-error-message">Please enter a valid telephone contact.</div>
+              </div>
+
+              <!-- Deployment Scope -->
+              <div class="form-group">
+                <label for="deploymentDistrict" class="form-label">
+                  DEPLOYMENT DISTRICT / REGION <span class="required-indicator">*</span>
+                </label>
+                <input type="text" id="deploymentDistrict" name="deploymentDistrict" class="form-input" required placeholder="e.g. Dumka / East Singhbhum, Jharkhand">
+                <div class="form-error-message">Please specify your target deployment region.</div>
+              </div>
+
+              <!-- Estimated School Count -->
+              <div class="form-group">
+                <label for="schoolCount" class="form-label">
+                  ESTIMATED PILOT SCHOOL NODES <span class="required-indicator">*</span>
+                </label>
+                <select id="schoolCount" name="schoolCount" class="form-select" required>
+                  <option value="">-- Select Scale --</option>
+                  <option value="1_to_5">1 to 5 Pilot Classrooms (Exploratory)</option>
+                  <option value="6_to_25">6 to 25 Schools (Cluster Level)</option>
+                  <option value="26_to_100">26 to 100 Schools (Sub-Division Scale)</option>
+                  <option value="100_plus">100+ Schools (Full District Rollout)</option>
+                </select>
+                <div class="form-error-message">Please estimate your initial node count.</div>
+              </div>
+
+              <!-- Target Dialect Focus -->
+              <div class="form-group form-col-span-2">
+                <label for="targetLanguages" class="form-label">
+                  PRIMARY INDIGENOUS LANGUAGES NEEDED <span class="required-indicator">*</span>
+                </label>
+                <select id="targetLanguages" name="targetLanguages" class="form-select" required>
+                  <option value="">-- Select Linguistic Focus --</option>
+                  <option value="santhali">Santhali (Ol Chiki Script)</option>
+                  <option value="mundari">Mundari (Bilingual Devanagari / Bani)</option>
+                  <option value="ho">Ho (Warang Citi Script)</option>
+                  <option value="multilingual_trio">All Three Languages (Full Jharkhand Suite)</option>
+                </select>
+                <div class="form-error-message">Please specify your language requirement.</div>
+              </div>
+
+              <!-- Technical Details / Project Description -->
+              <div class="form-group form-col-span-2">
+                <label for="projectDetails" class="form-label">
+                  INFRASTRUCTURE NOTES &amp; TEXTBOOK INTEGRATION DETAILS
+                </label>
+                <textarea id="projectDetails" name="projectDetails" class="form-textarea" placeholder="Detail hardware available (e.g. existing Android tablets, smart TVs), cellular connectivity conditions, and state textbook edition requirements."></textarea>
+                <div class="form-error-message"></div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                SUBMIT PILOT IMPLEMENTATION INTAKE
+              </button>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center; font-family: var(--font-mono);">
+                TRANSMISSIONS PROCESSED UNDER INDIA DPDP ACT 2023 PROTOCOLS. RESPONSE SLA: WITHIN 48 HOURS.
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Direct Institutional Physical Contact Details -->
+        <div style="max-width: 680px; margin: 2.5rem auto; padding: 1.5rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
+          <div class="section-tag">[DIRECT ENGINEERING CONTACT]</div>
+          <h4 style="margin-bottom: 0.5rem;">Tribal Pedagogy and Technology Initiative</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            For immediate government liaison, state procurement tenders, or academic consortium agreements, reach our physical offices directly:
+          </p>
+          <address class="address-block" style="font-size: 0.85rem;">
+            <strong>Central Technology Center:</strong> Morabadi, Ranchi, Jharkhand 834008, India<br>
+            <strong>Field Logistics Base:</strong> Bistupur, Jamshedpur, Jharkhand 831001, India<br>
+            Direct Inquiry: <a href="mailto:contact@janbhasha.org">contact@janbhasha.org</a> | Office: +91 (0651) 228-4910
+          </address>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Mobile CTA -->
+  <aside class="sticky-mobile-cta" aria-label="Quick Action">
+    <div class="sticky-mobile-label">
+      Deploy Field Pilot
+      <small>Institutional Request</small>
+    </div>
+    <a href="#pilotRequestForm" class="btn btn-primary btn-sm">FILL INTAKE</a>
+  </aside>
+
+  <!-- Cookie Consent -->
+  <div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie Preferences">
+    <div class="cookie-banner-title">Cookie and Telemetry Preferences</div>
+    <div class="cookie-banner-text">
+      We utilize strict privacy-preserving first-party telemetry to assess system latency and script retention. We do not transmit identifiers to third-party advertising brokers.
+    </div>
+    <div class="cookie-actions">
+      <button type="button" id="acceptCookiesBtn" class="btn btn-primary btn-sm">ACCEPT ESSENTIAL</button>
+      <button type="button" id="essentialCookiesBtn" class="btn btn-secondary btn-sm">MINIMAL ONLY</button>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>JANBHASHA INITIATIVE</h5>
+          <p>
+            AI-powered vernacular pedagogy and literacy acceleration platform for Santhali, Mundari, and Ho indigenous languages.
+          </p>
+          <address class="address-block">
+            <strong>Headquarters:</strong><br>
+            Tribal Pedagogy and Technology Lab<br>
+            Morabadi, Ranchi, Jharkhand 834008, India<br>
+            Official Inquiry: <a href="mailto:contact@janbhasha.org">contact@janbhasha.org</a><br>
+            Telephone: +91 (0651) 228-4910
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h5>CORE SUBSYSTEMS</h5>
+          <ul class="footer-links">
+            <li><a href="features/offline-sync.html">Offline Delta Sync</a></li>
+            <li><a href="features/vernacular-translation.html">Vernacular Translation</a></li>
+            <li><a href="speech-processing.html">Speech Recognition AI</a></li>
+            <li><a href="adaptive-pedagogy.html">IRT Adaptive Pedagogy</a></li>
+            <li><a href="worksheet-generator.html">Educator Studio</a></li>
+            <li><a href="administrative-telemetry.html">Administrative Telemetry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>RESOURCES</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Request Field Pilot</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+            <li><a href="robots.txt">Robots Directive</a></li>
+            <li><a href="manifest.webmanifest">Web Manifest</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>LEGAL</h5>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy (DPDP Act)</a></li>
+            <li><a href="terms.html">Terms of Service &amp; SLA</a></li>
+            <li><a href="404.html">System 404 Diagnostic</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Janbhasha Platform Initiative. All rights reserved.</div>
+        <div>WCAG 2.1 AA Compliant | Strict DPDP Act Adherence</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "janbhasha-web",
+  "version": "2.4.0",
+  "description": "Public web platform and architectural showcases for Janbhasha Vernacular Pedagogy",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "build": "echo 'Static multi-page web platform ready for deployment.'",
+    "preview": "npx serve . -l 3000"
+  }
+}
