@@ -1,5 +1,9 @@
 import dotenv from 'dotenv';
+import path from 'path';
+
+// Load local or root .env
 dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../../../.env') });
 
 export const config = {
   port: parseInt(process.env.PORT || '3000', 10),
@@ -10,4 +14,6 @@ export const config = {
   jwtRefreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '7d',
   corsOrigin: process.env.CORS_ORIGIN || '*',
   databaseUrl: process.env.DATABASE_URL || 'postgresql://janbhasha:janbhasha@localhost:5432/janbhasha',
+  openaiApiKey: process.env.OPENAI_API_KEY || '',
+  huggingFaceApiKey: process.env.HUGGING_FACE_API_KEY || '',
 };
