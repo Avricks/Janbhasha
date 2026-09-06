@@ -4,8 +4,9 @@ This document summarizes the complete project structure that has been set up for
 
 ## 📁 Root Level Files
 
-### Configuration & Documentation
-- ✅ `README.md` - Project overview and getting started guide
+### Configuration & Architecture Guides
+- ✅ `README.md` - Project overview, capability summary, and live link
+- ✅ `CAPABILITY_AND_FILE_STRUCTURE.md` - Complete file-type and functional capability guide
 - ✅ `AGENTS.md` - AI agent system documentation
 - ✅ `CLAUDE.md` - Claude AI assistant instructions
 - ✅ `CONTRIBUTING.md` - Contribution guidelines
@@ -17,20 +18,20 @@ This document summarizes the complete project structure that has been set up for
 
 ## 📂 Directory Structure
 
-### Core Applications
-- **`apps/`**
-  - `android/` - Native Android application
-  - `teacher-web/` - Teacher portal web app
-  - `admin-web/` - Admin dashboard
+### Core Applications (`apps/`)
+- `android/` - Native Android application (React Native / Expo / Kotlin for offline-first learners)
+- `teacher-web/` - Teacher portal web app (React 18 + Vite)
+- `admin-web/` - Admin dashboard (React 18 + Vite)
+- `web/` - Public architectural web platform & showcases (Multi-page, VC-grade compliance)
 
-### Backend Services
-- **`services/`**
-  - `api/` - Main API service
-  - `translation/` - Translation service
-  - `speech/` - Speech processing service
-  - `content/` - Content management service
-  - `assessment/` - Assessment and grading service
-  - `sync/` - Data synchronization service
+### Backend Microservices (`services/`)
+Every service follows the standard 3-tier structure (`controllers/`, `routes/`, `services/`):
+- `api/` - Main API Gateway and authentication service (Port 3000)
+- `translation/` - Translation and script transliteration service (Port 3001)
+- `speech/` - Speech processing (ASR / TTS) service (Port 3002)
+- `content/` - Content management & worksheet studio service (Port 3003)
+- `assessment/` - Assessment & IRT 3PL psychometrics service (Port 3004)
+- `sync/` - Data synchronization & conflict resolution service (Port 3005)
 
 ### AI & Machine Learning
 - **`ai/`**
